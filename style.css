@@ -1,0 +1,240 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('anime.jpg');
+    color: white;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 100vh;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+}
+
+.logo img {
+    width: 150px;
+}
+
+.navbar ul {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+.navbar ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+.navbar ul li a:hover {
+    color: #f5c518;
+}
+
+.cta-buttons .btn {
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    margin-left: 10px;
+    transition: background 0.3s, color 0.3s;
+}
+
+.watch-now {
+    background: #f5c518;
+    color: black;
+}
+
+.trailer {
+    background: transparent;
+    border: 1px solid white;
+    color: white;
+}
+
+.watch-now:hover {
+    background: #ddb400;
+}
+
+.trailer:hover {
+    background: white;
+    color: black;
+}
+
+.content {
+    text-align: center;
+    margin: auto;
+    max-width: 600px;
+    padding: 0 20px;
+}
+
+.content .text h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.content .text p {
+    font-size: 1.25rem;
+    margin-bottom: 40px;
+}
+
+.action-buttons .btn {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+.footer {
+    text-align: center;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.footer p {
+    margin: 0;
+}
+.cta-buttons .btn {
+    text-decoration: none;
+    padding: 12px 30px;
+    border-radius: 25px; /* Bordas arredondadas */
+    margin-left: 10px;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    display: inline-block;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3); /* Sombra */
+    position: relative;
+    overflow: hidden;
+}
+
+.watch-now {
+    background: linear-gradient(45deg, #f5c518, #f1a905); /* Gradiente */
+    color: white;
+    border: none;
+}
+
+.trailer {
+    background: linear-gradient(45deg, #ffffff, #cccccc); /* Gradiente claro */
+    color: black;
+    border: 1px solid #cccccc;
+}
+
+.cta-buttons .btn::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300%;
+    height: 300%;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    transition: all 0.75s ease;
+    transform: translate(-50%, -50%) scale(0);
+}
+
+.cta-buttons .btn:hover::before {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.watch-now:hover {
+    background: linear-gradient(45deg, #f1a905, #f5c518);
+}
+
+.trailer:hover {
+    background: linear-gradient(45deg, #cccccc, #ffffff);
+}
+
+.cta-buttons .btn:hover {
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.5); /* Efeito de sombra ao passar o mouse */
+    transform: translateY(-3px);
+}
+
+.cta-buttons .btn:active {
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    transform: translateY(1px);
+}
+.cta-buttons-main .btn-main {
+    text-decoration: none;
+    padding: 14px 32px;
+    border-radius: 25px; /* Bordas arredondadas */
+    margin: 10px;
+    font-size: 1.2rem; /* Tamanho de fonte maior */
+    font-weight: bold;
+    transition: all 0.3s ease;
+    display: inline-block;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2); /* Sombra sutil */
+    position: relative;
+    overflow: hidden;
+}
+
+.watch-now {
+    background-color: #f5c518; /* Cor sólida */
+    color: white;
+}
+
+.watch-trailer {
+    background-color: #333; /* Cor de fundo escura */
+    color: white;
+}
+
+.cta-buttons-main .btn-main:hover {
+    transform: translateY(-5px); /* Leve elevação ao passar o mouse */
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.4); /* Sombra aumentada */
+}
+
+.cta-buttons-main .btn-main:active {
+    transform: translateY(0); /* Efeito de clique */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Sombra reduzida */
+}
+
+.cta-buttons-main .btn-main::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300%;
+    height: 300%;
+    background: rgba(255, 255, 255, 0.2); /* Efeito de brilho */
+    border-radius: 50%;
+    transition: all 0.75s ease;
+    transform: translate(-50%, -50%) scale(0);
+}
+
+.cta-buttons-main .btn-main:hover::before {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+@media (max-width: 768px) {
+    .cta-buttons-main .btn-main {
+        padding: 12px 28px;
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .cta-buttons-main .btn-main {
+        padding: 10px 24px;
+        font-size: 0.9rem;
+    }
+}
+body {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('anime.jpg') no-repeat center center/cover;
+    color: white;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
